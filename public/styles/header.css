@@ -1,0 +1,23 @@
+header {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  left: 0;
+  height: 400px;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  /* z-index: 1030; */
+  background-color: #eb8d00;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+#ProfPic {
+  position: relative;
+  text-align: center;
+}
+
+#ProfName {
+  position: relative;
+  text-align: center;
+}

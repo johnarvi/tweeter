@@ -1,6 +1,6 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
+const userHelper    = require("../lib/util/user-helper");
 
 const express       = require('express');
 const tweetsRoutes  = express.Router();
@@ -30,6 +30,7 @@ module.exports = function(DataHelpers) {
         text: req.body.text
       },
       created_at: Date.now()
+      // created_at: Date(Date.now()); // retruns human readable date rather than time in milliseconds
     };
 
     DataHelpers.saveTweet(tweet, (err) => {
