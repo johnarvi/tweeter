@@ -1,22 +1,22 @@
 textarea {
   background-color: #f4f1ec;
-  position: relative;
-  left: 5%;
-  top: 10px;
+  position: absolute;
+  top: 10%;
+  left: 0;
   height: 45px;
   color: black;
   border: none;
   border-bottom: solid;
   font-family: 'Source Sans Pro', sans-serif;
-  width: 90%;
+  width: 100%;
 }
 
 
 input {
   background-color: #4d4fcf;
-  position: relative;
+  position: absolute;
   top: 54px;
-  right: 85.5%;
+  left: 0%;
   border: none;
   color: white;
   padding: 0.5% 0.75%;
@@ -26,9 +26,9 @@ input {
 }
 
 .counter {
-  position: relative;
-  top: 7px;
-  left: 43%;
+  position: absolute;
+  top: 54px;
+  right: 0%;
   font-family: 'Bungee', sans-serif;
   font-style: normal;
 
