@@ -1,6 +1,6 @@
-
 $(document).ready(function() {
   $("#newTweet").keyup(function() {
-    console.log($(this).val().length);
+    let length = $(this).val().length;
+    $(this).parent().children(".counter").text(length);
   });
 });
