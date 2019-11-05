@@ -1,3 +1,6 @@
+
 $(document).ready(function() {
-  console.log('test');
+  $("#newTweet").keyup(function() {
+    console.log($(this).val().length);
+  });
 });
