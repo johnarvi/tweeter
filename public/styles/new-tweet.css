@@ -31,5 +31,8 @@ input {
   right: 0%;
   font-family: 'Bungee', sans-serif;
   font-style: normal;
+}
 
+.counter.over {
+  color: red;
 }

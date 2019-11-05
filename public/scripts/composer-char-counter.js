@@ -1,6 +1,10 @@
 $(document).ready(function() {
   $("#newTweet").keyup(function() {
     let length = $(this).val().length;
-    $(this).parent().children(".counter").text(length);
+    let counter = $(this).parent().children(".counter");
+    counter.text(140 - length);
+    (length > 140) ? counter.addClass("over")
+      : counter.removeClass("over");
   });
 });
+
