@@ -1,7 +1,14 @@
 section {
   position: relative;
   width: 100%;
+  padding-bottom: 10px;
+  bottom: 30px;
 }
+
+section h2 {
+  padding-bottom: 40px;
+}
+
 textarea {
   background-color: #f4f1ec;
   position: relative;
@@ -17,7 +24,7 @@ textarea {
 input {
   background-color: #4d4fcf;
   position: absolute;
-  top: 54px;
+  top: 94px;
   left: 0%;
   min-width: 10%;
   border: none;
@@ -30,7 +37,7 @@ input {
 
 .counter {
   position: absolute;
-  top: 54px;
+  top: 94px;
   right: 0%;
   font-family: 'Bungee', sans-serif;
   font-style: normal;

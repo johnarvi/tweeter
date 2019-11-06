@@ -29,51 +29,57 @@ const data = [
   }
 ];
 
-// const renderTweets = function(tweets) {
-//   tweets.forEach(tweet => {
-//     createTweetElement(tweet);
-//   });
-//   // calls createTweetElement for each tweet
-//   // takes return value and appends it to the tweets container
-// };
-
-const tweetData = data[0];
-
-const createTweetElement = function(tweet) {
-  let $tweet = $('<article>').addClass('tweet');
-
-  return $tweet;
+const tweetCreatedTime = (time) => {
+  const days = Math.round(time / (24 * 60 * 60 * 1000));
+  const years = Math.round(days / 365);
+  const past = (days > 365) ? `${years} year/s ago` : `${days} days/s ago`;
+  return past;
 };
 
-const $tweet = createTweetElement(tweetData);
-console.log($tweet);
-$('#tweets-container').append($tweet);
 
+const renderTweets = function(tweets) {
+  console.log(tweets)
+  tweets.forEach(tweet => {
+    $('.tweets').append(createTweetElement(tweet));
+  });
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+};
+
+
+const createTweetElement = function(tweet) {
+  const time = tweet.created_at;
+
+  const $body = `
+  <article class="tweet">
+    <div class="tweet-header"> 
+      <div class="profileGrp">
+          <img src= "${tweet.user.avatars}">
+          <span class="profileName">${tweet.user.name}</span>
+      </div>
+      <div>
+        <span class="username">${tweet.user.handle}</span>
+      </div>                    
+    </div>
+    <div class="tweet-body">
+      <textarea name="text">${tweet.content.text}</textarea>
+    </div>
+    <div class="tweet-footer"> 
+    <div>
+      <span class="date">${tweetCreatedTime(time)}</span>
+      <span class="icon">
+          <img src="/images/flag.png"> 
+          <img src="/images/reload.png"> 
+          <img src="/images/heart.png"> 
+      </span>
+    </div>
+    </div>
+  </article>`;
+  return $body;
+};
+
+$(document).ready(function() {
+  renderTweets(data);
+});
 // Test / driver code (temporary)
 
-// renderTweets(data);
-
-// <article class="tweet">
-// <div class="tweet-header"> 
-//   <div class="profileGrp">
-//       <img src= "${user.avatars}">
-//       <span class="profileName">${user.name}</span>
-//   </div>
-//   <div>
-//     <span class="username">${user.handle}</span>
-//   </div>                    
-// </div>
-// <div class="tweet-body">
-//   <textarea name="text">${content.text}</textarea>
-// </div>
-// <div class="tweet-footer"> 
-// <div>
-//   <span class="date">${created_at}</span>
-//   <span class="icon">
-//       <img src="/images/flag.png"> 
-//       <img src="/images/reload.png"> 
-//       <img src="/images/heart.png"> 
-//   </span>
-// </div>
-// </div>
-// </article>

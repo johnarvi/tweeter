@@ -59,37 +59,39 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
+        <h2>Compose Tweet</h2>
+        <div>
         <form action="/tweets" method="POST" Content-Type= "application/x-www-form-urlencoded">
           <textarea name="text" placeholder="What are you humming about?" id = newTweet></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+        </div>
       </section>
-    
-        <article class="tweet">
+      <div class ="tweets">
+        <!-- <article class="tweet">
           <div class="tweet-header"> 
             <div class="profileGrp">
-                <img src="/images/avatar.png">
-                <span class="profileName">John Wick</span>
+                <img src= ``>
+                <span class="profileName">${tweetData.user.name}</span>
             </div>
             <div>
-              <span class="username">@username</span>
+              <span class="username">${tweetData.user.handle}</span>
             </div>                    
           </div>
           <div class="tweet-body">
-            <textarea name="text">Wow! What a tweeterific app!</textarea>
+            <textarea name="text">${tweetData.content.text}</textarea>
           </div>
           <div class="tweet-footer"> 
-            <span class="date">10 days ago</span>
+            <span class="date">${tweetData.created_at}</span>
             <span class="icon">
                 <img src="/images/flag.png"> 
                 <img src="/images/reload.png"> 
                 <img src="/images/heart.png"> 
             </span>
           </div>
-        </article>
-
+        </article> -->
+      </div>
     </main>
   </body>
 </html>
