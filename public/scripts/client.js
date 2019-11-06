@@ -100,20 +100,27 @@ $(document).ready(function() {
   $(function() {
     const $input = $('.new-tweet form');
     $input.submit(function(event) {
-      console.log($input.serialize());
       event.preventDefault();
-      $.ajax({
-        method: "POST",
-        url: "/tweets",
-        data: $input.serialize(),
-        contentType: "application/x-www-form-urlencoded",
-        success: function() {
-          loadtweets();
-        },
-        error: function() {
-          console.log("failed");
-        }
-      });
+      console.log($input.serialize().length);
+      if ($input.serialize().length > 145) {
+        alert('too long');
+      } else if ($input.serialize().length <= 5) {
+        alert('not typed a tweet');
+      } else {
+        $.ajax({
+          method: "POST",
+          url: "/tweets",
+          data: $input.serialize(),
+          contentType: "application/x-www-form-urlencoded",
+          success: function() {
+            loadtweets();
+            // need to empty out the text field;
+          },
+          error: function() {
+            console.log("failed");
+          }
+        });
+      }
       // .done(function(msg) {
       //   event.preventDefault();
       //   loadtweets();
