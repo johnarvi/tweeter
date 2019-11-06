@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("test");
   $("#newTweet").keyup(function() {
     let length = $(this).val().length;
     let counter = $(this).parent().children(".counter");

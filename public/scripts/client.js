@@ -74,21 +74,23 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
+
   renderTweets(data);
 });
 
 $(function() {
-  const $input = $('#sendTweet');
+  const $input = $('.new-tweet form');
   $input.submit(function(event) {
+    console.log($input.serialize());
     event.preventDefault();
     $.ajax({
       method: "POST",
       url: "/tweets",
-      data: $('#newTweet').serialize(),
+      data: $input.serialize(),
     })
       .done(function( msg ) {
         alert( "Data Saved: " + msg);
-        console.log(msg);
+        console.log($input.children('#newTweet').val());
       });
   });
 });
