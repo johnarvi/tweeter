@@ -39,7 +39,7 @@ const tweetCreatedTime = (time) => {
 
 const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
-    $('.tweets').append(createTweetElement(tweet));
+    $('.tweets').prepend(createTweetElement(tweet));
   });
 };
 
