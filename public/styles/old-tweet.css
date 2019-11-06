@@ -1,16 +1,17 @@
 .tweet {
   border-color: black;
-  border: solid 5px;
+  border: solid 2px;
   width: 100%;
   position: absolute;
   top: 250px;
   height: 350px;
+  font-family: 'Source Sans Pro', sans-serif;
   /* display: flex; */
   /* align-items: flex-start; */
   /* justify-content: space-between; */
 }
 
-.tweet .tweet-header{
+.tweet .tweet-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,49 +19,74 @@
   padding: 1%;
 }
 
-.tweet .tweet-header .profileName{
+.tweet .tweet-header .profileGrp{
   display: flex;
   flex-direction: row;
   align-content: center;
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .tweet .tweet-header img{
   height: 100px;
+}
 
+.tweet .tweet-header .profileName{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 40px;
+  padding-left: 8px;
+  height: 140px;
 }
 
 .tweet .tweet-header .username{
   display: flex;
-  /* flex-direction: row; */
-  align-items: baseline;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 44px;
+  padding-right: 10px;
+  height: 140px;
 }
 
 .tweet .tweet-body{
-  min-height: 80px;
   padding: 1%;
   padding-bottom: 5%;
   display: flex;
-  align-items: bottom;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.tweet .tweet-body textarea {
+  min-height: 80px;
+  display: flex;
+  align-self: flex-end;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
-.date {
-  /* flex-grow: 1; */
+.tweet .tweet-footer{
   display: flex;
-  align-items: bottom;
-  justify-content: flex-end;
-  text-align: left;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 1%;
 }
 
-/* .icon {
-  text-align: right;
-  /* display: flex; */
-  /* width: 20px; */
-  /* display: flex;
-  
+.tweet .tweet-footer .date {
+  /* flex-grow: 1; */
+  display: flex;
+  align-items: bottom;
+  justify-content: left;
+  /* text-align: left; */
+  padding: 1%;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
   height: 10px;
   width: 10px;
-  align-content:;
   
-} */
+}
