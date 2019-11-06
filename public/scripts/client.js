@@ -4,30 +4,30 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
 const tweetCreatedTime = (time) => {
   const days = Math.round(time / (24 * 60 * 60 * 1000));
@@ -73,27 +73,82 @@ const createTweetElement = function(tweet) {
   return $body;
 };
 
+const loadtweets = function() {
+  $.ajax({
+    method: "GET",
+    url: "/tweets",
+    dataType: "json",
+    // contentType: "application/x-www-form-urlencoded",
+    success: function(db) {
+      renderTweets(db);
+    },
+    error: function() {
+      console.log("failed");
+    }
+  });
+};
+  // $.ajax({url: '/tweets',
+  //         type: 'GET', dataType: "json" })
+  //   .then(function (tweets) {
+  //     console.log(tweets);
+  //     renderTweets(tweets);
+  //   });
 $(document).ready(function() {
+  // renderTweets(data);
+  loadtweets();
 
-  renderTweets(data);
-});
-
-$(function() {
-  const $input = $('.new-tweet form');
-  $input.submit(function(event) {
-    console.log($input.serialize());
-    event.preventDefault();
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: $input.serialize(),
-    })
-      .done(function( msg ) {
-        alert( "Data Saved: " + msg);
-        console.log($input.children('#newTweet').val());
+  $(function() {
+    const $input = $('.new-tweet form');
+    $input.submit(function(event) {
+      console.log($input.serialize());
+      event.preventDefault();
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $input.serialize(),
+        contentType: "application/x-www-form-urlencoded",
+        success: function() {
+          loadtweets();
+        },
+        error: function() {
+          console.log("failed");
+        }
       });
+      // .done(function(msg) {
+      //   event.preventDefault();
+      //   loadtweets();
+      //   alert( "Data Saved: " + msg);
+      //   console.log($input.children('#newTweet').val());
+      // });
+    });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // $(function() {
 //   const $input = $('#sendTweet');
 //   $input.submit(function(send) {
