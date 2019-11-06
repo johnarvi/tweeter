@@ -1,8 +1,10 @@
+section {
+  position: relative;
+  width: 100%;
+}
 textarea {
   background-color: #f4f1ec;
-  position: absolute;
-  top: 10%;
-  left: 0;
+  position: relative;
   height: 45px;
   color: black;
   border: none;
@@ -17,6 +19,7 @@ input {
   position: absolute;
   top: 54px;
   left: 0%;
+  min-width: 10%;
   border: none;
   color: white;
   padding: 0.5% 0.75%;
