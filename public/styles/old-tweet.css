@@ -94,9 +94,10 @@
 }
 
 .tweet:hover {
-  border: solid 10px;
+  border: solid 5px;
   text-shadow: black 5px;
-  box-shadow: black 20px;
+  padding: 10px;
+  box-shadow: 5px 10px rgb(62, 105, 185);
   font-weight: bold;
   /* background-color:red; */
 }
