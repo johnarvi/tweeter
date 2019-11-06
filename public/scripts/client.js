@@ -76,5 +76,40 @@ const createTweetElement = function(tweet) {
 $(document).ready(function() {
   renderTweets(data);
 });
-// Test / driver code (temporary)
+
+$(function() {
+  const $input = $('#sendTweet');
+  $input.submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $('#newTweet').serialize(),
+    })
+      .done(function( msg ) {
+        alert( "Data Saved: " + msg);
+        console.log(msg);
+      });
+  });
+});
+// $(function() {
+//   const $input = $('#sendTweet');
+//   $input.submit(function(send) {
+//     $.ajax('/tweets', { method: 'POST' })
+//     .then(function (tweet) {
+//       console.log('Success: ', tweet.serialize());
+//       // $button.replaceWith(morePostsHtml);
+//     });
+//   });
+// });
+
+
+
+// $(function() {
+//   const $input = $('#sendTweet');
+//   $input.on('click', function (e) {
+//     e.preventDefault();
+//     console.log('Tweet clicked, performing ajax call... asdfsdfasdfsdfsdf');
+//   });
+// });
 
