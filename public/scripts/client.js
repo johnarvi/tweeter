@@ -38,12 +38,9 @@ const tweetCreatedTime = (time) => {
 
 
 const renderTweets = function(tweets) {
-  console.log(tweets)
   tweets.forEach(tweet => {
     $('.tweets').append(createTweetElement(tweet));
   });
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 };
 
 
@@ -65,14 +62,12 @@ const createTweetElement = function(tweet) {
       <textarea name="text">${tweet.content.text}</textarea>
     </div>
     <div class="tweet-footer"> 
-    <div>
       <span class="date">${tweetCreatedTime(time)}</span>
       <span class="icon">
           <img src="/images/flag.png"> 
           <img src="/images/reload.png"> 
           <img src="/images/heart.png"> 
       </span>
-    </div>
     </div>
   </article>`;
   return $body;
