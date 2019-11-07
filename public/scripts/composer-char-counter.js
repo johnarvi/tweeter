@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#newTweet").keyup(function() {
+  $("#newTweet").on("input", function() {
     let length = $(this).val().length;
     let counter = $(this).parent().children(".counter");
     counter.text(140 - length);
