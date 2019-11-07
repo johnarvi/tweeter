@@ -1,0 +1,31 @@
+main #error{
+  background: rgb(235, 90, 90);
+  border: solid red 5px;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-content: center
+}
+
+section img {
+  width: 5em;
+}
+
+section #errMsg {
+  width: 70%;
+  top: 2em;
+  background: rgb(100, 5, 21);
+  height: 33%;
+  align-self: center;
+  font-size: 40px;
+  font-weight: bold;
+}

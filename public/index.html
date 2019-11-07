@@ -24,6 +24,9 @@
 
     <!-- old tweets CSS -->
     <link rel="stylesheet" href="/styles/old-tweet.css" type="text/css" />
+
+    <!-- error CSS -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
     
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -45,7 +48,9 @@
       <span id="Logo">Tweeter</span>
       <span id="sideHeader">
       <span id="tweet">Write a new tweet</span>
-      <img id="downArrow" src="/images/downArrow.gif"> 
+      <div id="downArrow">
+          <img src="/images/downArrow.gif"> 
+      </div>
       </span>
     </nav>
 
@@ -60,8 +65,13 @@
     </header>
 
     <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+      <h2>Compose Tweet</h2>
+        <section id="error">
+          <img src="/images/error.png">
+          <div id = errMsg>BLAh</div>
+          <img src="/images/error.png">
+        </section>
+        <section class="new-tweet">
         <div>
         <form action="/tweets" method="POST" Content-Type= "application/x-www-form-urlencoded">
           <textarea name="text" placeholder="What are you humming about?" id = newTweet></textarea>

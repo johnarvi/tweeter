@@ -5,7 +5,9 @@
   top: 150px;
   height: 350px;
   margin-bottom: 40px;
+  margin-top: 40px;
   font-family: 'Source Sans Pro', sans-serif;
+  opacity: 0.4;
 }
 
 
@@ -98,5 +100,6 @@
   padding: 10px;
   box-shadow: 5px 10px rgb(62, 105, 185);
   font-weight: bold;
+  opacity: 1;
 }
 

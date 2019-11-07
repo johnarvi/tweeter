@@ -83,7 +83,7 @@ const loadtweets = function() {
     method: "GET",
     url: "/tweets",
     dataType: "json",
-    // contentType: "application/x-www-form-urlencoded",
+    contentType: "application/x-www-form-urlencoded",
     success: function(db) {
       renderTweets(db);
     },
@@ -99,18 +99,19 @@ const loadtweets = function() {
   //     renderTweets(tweets);
   //   });
 $(document).ready(function() {
-  // renderTweets(data);
+  $('#error').hide();
   loadtweets();
-
   $(function() {
     const $input = $('.new-tweet form');
     $input.submit(function(event) {
       event.preventDefault();
       console.log($input.serialize().length);
       if ($input.serialize().length > 145) {
-        alert('too long');
+        $('#error').children('#errMsg').text('Unfortunately your message is too long');
+        $('#error').slideDown(500);
       } else if ($input.serialize().length <= 5) {
-        alert('not typed a tweet');
+        $('#error').children('#errMsg').text('Your message is empty');
+        $('#error').slideDown(500);
       } else {
         $.ajax({
           method: "POST",
@@ -120,18 +121,13 @@ $(document).ready(function() {
           success: function() {
             loadtweets();
             // need to empty out the text field;
+            $('.new-tweet').children('div').text('You message is empty');;
           },
           error: function() {
             console.log("failed");
           }
         });
       }
-      // .done(function(msg) {
-      //   event.preventDefault();
-      //   loadtweets();
-      //   alert( "Data Saved: " + msg);
-      //   console.log($input.children('#newTweet').val());
-      // });
     });
   });
 });
@@ -152,6 +148,12 @@ $(document).ready(function() {
 
 
 
+// .done(function(msg) {
+//   event.preventDefault();
+//   loadtweets();
+//   alert( "Data Saved: " + msg);
+//   console.log($input.children('#newTweet').val());
+// });
 
 
 
