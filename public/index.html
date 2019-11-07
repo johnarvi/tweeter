@@ -50,7 +50,7 @@
     <nav class="navbar">
       <span id="Logo">Tweeter</span>
       <span id="sideHeader">
-      <span id="tweet">Write a new tweet</span>
+      <span id="tweet"><b>Write</b> a new tweet</span>
       <div id="downArrow">
           <img src="/images/downArrow.gif"> 
       </div>
@@ -69,19 +69,17 @@
 
     <main class="container">
       <h2>Compose Tweet</h2>
-        <section id="error">
+      <section id="error">
           <img src="/images/error.png">
           <div id = errMsg></div>
           <img src="/images/error.png">
-        </section>
-        <section class="new-tweet">
-        <div>
+      </section>
+      <section class="new-tweet">
         <form action="/tweets" method="POST" Content-Type= "application/x-www-form-urlencoded">
           <textarea name="text" placeholder="What are you humming about?" id = newTweet></textarea>
           <input type="submit" value="Tweet" id="sendTweet">
           <span class="counter">140</span>
         </form>
-        </div>
       </section>
       <div class ="tweets">
       </div>

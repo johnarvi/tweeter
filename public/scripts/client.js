@@ -103,16 +103,16 @@ $(document).ready(function() {
       console.log($input.serialize().length);
       if ($input.serialize().length > 145) {
         $('#error').children('#errMsg').text('Unfortunately your message is too long');
-        $('#error').slideDown(500, function() {
+        $('#error').slideDown(function() {
           setTimeout(function() {
-            $('#error').slideUp(500);
+            $('#error').slideUp();
           }, 2000);
         });
       } else if ($input.serialize().length <= 5) {
         $('#error').children('#errMsg').text('Your message is empty');
-        $('#error').slideDown(500, function() {
+        $('#error').slideDown(function() {
           setTimeout(function() {
-            $('#error').slideUp(500);
+            $('#error').slideUp();
           }, 2000);
         });
       } else {
