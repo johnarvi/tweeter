@@ -10,15 +10,35 @@
   font-size: 40px;
   z-index: 1030;
   padding: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #Logo {
   font-family: 'Bungee', sans-serif;
 }
 
+#sideHeader{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 60px;
+  margin-right: 4%;
+}
+
 #tweet {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: #ffffff;
-  right: 0%;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
 }
+
+#downArrow {
+  height: 25px;
+  width: 20px;
+  margin-left: 45%;
+}
+
