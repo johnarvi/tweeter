@@ -1,5 +1,5 @@
 header {
-  position: absolute;
+  position: relative;
   top: 120px;
   right: 0;
   left: 0;
@@ -7,7 +7,6 @@ header {
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
-  /* z-index: 1030; */
   background-color: #eb8d00;
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
 }

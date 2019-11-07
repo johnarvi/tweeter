@@ -17,6 +17,7 @@
 
 #Logo {
   font-family: 'Bungee', sans-serif;
+  float: left;
 }
 
 #sideHeader{
@@ -25,6 +26,7 @@
   align-content: center;
   height: 60px;
   margin-right: 4%;
+  float: right;
 }
 
 #tweet {

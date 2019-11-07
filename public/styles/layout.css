@@ -41,3 +41,31 @@ main {
 .container:down {
   top: 520px;
 }
+
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 50%;
+    float: left;
+    top: 120px;
+  }
+
+  main.container {
+    width: 50%;
+    float: right;
+    top: 120px;
+  }
+
+  /* .menu {
+    background-color: #111111;
+    color: #f0f0f0;
+    text-align: left;
+  }
+
+
+
+  .main {
+    max-width: 1024px;
+    font-size: 16px;
+    margin: 0 auto;
+  } */
+}
