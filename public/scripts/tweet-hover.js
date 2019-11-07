@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   const $dwnArrow = $('#downArrow');
-  $dwnArrow.on('click', function () {
+  $dwnArrow.on('click', function() {
   //   $(this).addClass("hover");
   // } , function() {
   //   $(this).removeClass("hover");

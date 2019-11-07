@@ -31,10 +31,13 @@
 
 const tweetCreatedTime = (time) => {
   const todaysDate = new Date().getTime();
-  let day = 24 * 60 * 60 * 1000;
-  const days = Math.round(todaysDate / day) - Math.round(time / day);
+  const day = 24 * 60 * 60 * 1000;
+  const minute = Math.round((todaysDate - time) / 60000);
+  const days = Math.round((todaysDate - time) / day);
   const years = Math.round((days * 10) / 365) / 10;
-  const past = (days > 365) ? `${years} year/s ago` : `${days} days/s ago`;
+  const past = (days > 365) ? `${years} year/s ago`
+    : (days > 0) ? `${days} day/s ago`
+      : `${Math.round((minute) * 10) / 10} minute/s ago`;
   return past;
 };
 
