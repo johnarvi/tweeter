@@ -99,6 +99,8 @@ $(document).ready(function() {
           contentType: "application/x-www-form-urlencoded",
           success: function() {
             loadtweets();
+            $('#newTweet').val('');
+            $('.counter').text(140);
           },
           error: function() {
             console.log("failed");
