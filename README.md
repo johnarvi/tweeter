@@ -17,3 +17,16 @@ Added responsivness to tweet page, error handling and animations.
 
 - Express
 - Node 5.10.x or above
+
+
+## Screenshots
+
+!["Screenshot of Error Handling"](https://github.com/johnarvi/tweeter/blob/master/docs/ErrorHandling.png)
+
+!["Screenshot of responsive stack design below 1024px"](https://github.com/johnarvi/tweeter/blob/master/docs/headerLowerRes.png)
+
+!["Screenshot of hover effects on previous tweets"](https://github.com/johnarvi/tweeter/blob/master/docs/hoverEffect.png)
+
+!["Screenshot of stacked view of tweet"](https://github.com/johnarvi/tweeter/blob/master/docs/lowResTweetView.png)
+
+!["Screenshot of new tweet toggling"](https://github.com/johnarvi/tweeter/blob/master/docs/tweetTogglingandFocus.png)
