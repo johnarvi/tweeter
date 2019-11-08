@@ -1,8 +1,9 @@
 $(document).ready(function() {
-  $('.new-tweet').slideUp(400);
+  $('.new-tweet').hide();
   const $dwnArrow = $('#downArrow');
   $dwnArrow.on('click', function() {
-    $(window).scrollTop(0); 
+    $(window).scrollTop(); 
     $('.new-tweet').slideToggle();
+    $('#newTweet').focus();
   });
 });

@@ -5,16 +5,18 @@ header {
   font-size: 25px;
   background-color: #eb8d00;
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  text-align: center;
+  /* top: 120px; */
 }
+
 
 #ProfPic {
   position: relative;
-  text-align: center;
-  align-content: middle;
-  top: 3vh
+  top: 1em;
+  width: 8em;
+  height: 8em;
 }
 
 #ProfName {
-  position: relative;
   text-align: center;
 }

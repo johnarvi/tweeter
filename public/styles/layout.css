@@ -29,6 +29,10 @@ header{
   top: 18vh;
 }
 
+.bold {
+  font-weight:bold;
+}
+
 main {
   position: relative;
   padding-left: 5vh;
@@ -41,9 +45,12 @@ main {
 
 @media only screen and (min-width: 1024px) {
   header {
-    width: 50%;
     float: left;
   }
+
+  /* header div{
+    width: 70%;
+  } */
 
   main.container {
     width: 50%;
