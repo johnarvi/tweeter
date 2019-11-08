@@ -21,9 +21,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 header{
   z-index: 500;
   top: 18vh;
@@ -37,7 +34,7 @@ main {
   position: relative;
   padding-left: 5vh;
   padding-right: 5vh;
-  padding-top: 10vh;
+  padding-top: 15vh;
   color: black;
   text-align: center;
   z-index: 50;
@@ -45,12 +42,23 @@ main {
 
 @media only screen and (min-width: 1024px) {
   header {
+    width: 50%;
+    height:100%;
     float: left;
+    top: 0;
+    position: fixed;
   }
 
-  /* header div{
-    width: 70%;
-  } */
+  #ProfPic {
+    position: relative;
+    top: 6em;
+    width: 15em;
+    height: 15em;
+  }
+
+  #ProfName {
+    margin-top: 4.5em;
+  }
 
   main.container {
     width: 50%;

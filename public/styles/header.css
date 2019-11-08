@@ -6,17 +6,17 @@ header {
   background-color: #eb8d00;
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   text-align: center;
-  /* top: 120px; */
 }
 
 
 #ProfPic {
   position: relative;
-  top: 1em;
-  width: 8em;
-  height: 8em;
+  top: 2em;
+  width: 10em;
+  height: 10em;
 }
 
 #ProfName {
+  margin-top: 2em;
   text-align: center;
 }
