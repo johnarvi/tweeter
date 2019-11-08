@@ -26,33 +26,34 @@ body {
  */
 header{
   z-index: 500;
+  top: 18vh;
 }
 
 main {
   position: relative;
-  left: 5%;
-  top: 520px;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-top: 10vh;
   color: black;
   text-align: center;
-  width: 90%;
   z-index: 50;
-}
-
-.container:down {
-  top: 520px;
 }
 
 @media only screen and (min-width: 1024px) {
   header {
     width: 50%;
     float: left;
-    top: 120px;
   }
 
   main.container {
     width: 50%;
+    top: 10vh;
     float: right;
-    top: 120px;
+  }
+
+  .navbar {
+    background-color: #4056A1;
+    background-image: unset;
   }
 
   /* .menu {

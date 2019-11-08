@@ -40,7 +40,7 @@ const createTweetElement = function(tweet) {
       </div>                    
     </div>
     <div class="tweet-body">
-      <textarea name="text">${tweet.content.text}</textarea>
+      <textarea name="text" readonly>${tweet.content.text}</textarea>
     </div>
     <div class="tweet-footer"> 
       <span class="date">${tweetCreatedTime(time)}</span>

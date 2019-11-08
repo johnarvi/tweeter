@@ -1,9 +1,5 @@
 header {
   position: relative;
-  top: 120px;
-  right: 0;
-  left: 0;
-  height: 400px;
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 25px;
@@ -14,6 +10,8 @@ header {
 #ProfPic {
   position: relative;
   text-align: center;
+  align-content: middle;
+  top: 3vh
 }
 
 #ProfName {
